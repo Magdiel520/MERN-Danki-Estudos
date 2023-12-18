@@ -2,24 +2,46 @@ import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  const handleNameChange = ()=>{
+    const names = ['Bom', 'Kevin', 'Mag'];
+    const int = Math.floor(Math.random()*3);
+    return names[int];
+  }
+
+  const name = "Maguid";
+
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Hello {handleNameChange()}!
         </p>
-        <a
-          className="App-link"
-          href="https://www.github.com/Magdiel520"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Acess repository by clicking here
-        </a>
+      <p>{name}</p>      
       </header>
     </div>
   );
 }
 
+// function App() {
+//   const handleNameChange = ()=>{
+//     const names = ['Bom', 'Kevin', 'Mag'];
+//     const int = Math.floor(Math.random()*3);
+//     return names[int];
+//   }
+
+//   const name = "Maguid";
+
+//   return (
+//     <div className="App">
+//       <header className="App-header">
+//         <img src={logo} className="App-logo" alt="logo" />
+//         <p>
+//           Hello {handleNameChange()}!
+//         </p>
+//       <p>{name}</p>      
+//       </header>
+//     </div>
+//   );
+// }
 export default App;
